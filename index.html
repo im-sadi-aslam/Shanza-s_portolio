@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shanza Navbar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #dceff1, #c6e0e4);
+  color: #1d1d1d;
+}
+
+    .navbar-brand span:nth-child(1) {
+      color: #003F3F;
+      font-weight: bold;
+    }
+
+    .navbar-brand span:nth-child(2) {
+      color: #20CFCF;
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #000;
+      margin: 0 12px;
+      position: relative;
+  transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #20CFCF;
+      transform: scale(1.05);
+    }
+    
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #20CFCF;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+    .talk-btn {
+      background-color: #003F3F;
+      color: white;
+      border-radius: 50px;
+      padding: 8px 24px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .talk-btn:hover {
+      background-color: #016161;
+      color: white;
+    }
+
+    .btn-primary:hover {
+  background-color: #168c88;
+  transform: scale(1.05);
+}
+.btn-primary a{
+  color: white;
+  text-decoration: none;
+}
+.btn-secondary a{
+  color: white;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+/* Smooth transition for buttons */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+.hero-text {
+  max-width: 70%;
+}
+
+.hero-text h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: #1d1d1d;
+}
+
+.hero-text span {
+  color: #1d1d1d;
+}
+
+.hero-text p {
+  font-size: 25px;
+  margin-top: 20px;
+  color: #444;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+.hero-buttons a{
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+
+
+.btn {
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2ba6a0;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #1d1d1d;
+  color: white;
+}
+
+.hero-image img {
+  width: 280px;
+  border-radius: 50%;
+  border: 8px solid #1ab2a8;
+}
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating-img {
+  animation: float 3s ease-in-out infinite;
+}
+.contact-icons {
+  margin-top: -150px;
+  padding-left: 150px;
+  display: flex;
+  gap: 20px;
+}
+
+.contact-icons .icon {
+  font-size: 40px;
+  color: #1ab2a8; 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons .icon:hover {
+  color: #003d3b; 
+  transform: scale(1.2);
+}
+@media (max-width: 768px) {
+  .contact-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .icon:hover{
+    font-size: 22px;
+  }
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <span>SHA</span><span>NZA</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index1.html">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="index2.html">Skill</a></li>
+         <li class="nav-item"><a class="nav-link" href="index6.html">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="index3.html">Review</a></li>
+        <li class="nav-item"><a class="nav-link" href="index4.html">Qualifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="index5.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <a href="#" class="btn talk-btn d-none d-lg-block">LET’S TALK</a>
+  </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-text">
+      <h1>Hey!</h1>
+<p>"I don’t just teach—I inspire, guide, and shape confident learners. I’m Shanza Aslam, your partner in academic success."</p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary"><a href="index7.html">EXPERIENCE</a></button>
+        <button class="btn btn-secondary"><a href="index5.html">HIRE ME</a></button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/WhatsApp Image 2025-05-10 at 22.30.37_54ce1d0f.jpg" alt="Web Developer" class="floating-img" />
+    </div>
+  </section>
+
+  <div class="contact-icons">
+  <a href="mailto:Kabeersafeena27@gmail.com" title="Email" class="icon email" target="_blank">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://wa.me/923063407253" title="WhatsApp" class="icon whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

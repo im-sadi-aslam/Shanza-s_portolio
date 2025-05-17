@@ -1,0 +1,68 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #dceff1, #c6e0e4);
+  color: #1d1d1d;
+}
+
+    .navbar-brand span:nth-child(1) {
+      color: #003F3F;
+      font-weight: bold;
+    }
+
+    .navbar-brand span:nth-child(2) {
+      color: #20CFCF;
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #000;
+      margin: 0 12px;
+      position: relative;
+  transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #20CFCF;
+      transform: scale(1.05);
+    }
+    
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #20CFCF;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+  .cert-item {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .cert-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .cert-item:hover {
+    transform: scale(1.05);
+  }
+  @media (max-width: 768px) {
+    .cert-item {
+      width: 90%;
+    }
+  }
